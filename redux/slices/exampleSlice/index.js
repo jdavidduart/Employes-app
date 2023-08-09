@@ -1,16 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
+import dummyData from "../../../utils/DummyData/data";
 
-const initialState = { phrase: "Hello world", token: null };
+const initialState = {
+  employees: dummyData,
+};
 
-const exampleSlice = createSlice({
-    name: "example",
-    initialState,
-    reducers: {
-        setTest: (state, action) => {
-            state.test = action.payload.data;
-        }
-    }
+const employeesSlice = createSlice({
+  name: "employees",
+  initialState,
+  reducers: {
+    setTest: (state, action) => {
+      state.test = action.payload.data;
+    },
+  },
 });
 
-export const { setTest } = exampleSlice.actions;
-export const exampleReducer = exampleSlice.reducer;
+export const { setTest } = employeesSlice.actions;
+export const exampleReducer = employeesSlice.reducer;
