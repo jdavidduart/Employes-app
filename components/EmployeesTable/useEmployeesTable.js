@@ -34,11 +34,13 @@ export const useEmployeesTable = () => {
               gap: "4px",
             }}
           >
-            <Button
-              icon={"bi bi-eye"}
-              variant="btn-outline-primary"
-              size="btn-sm"
-            />
+            <a href={`/employeedetail/${row.id}`}>
+              <Button
+                icon={"bi bi-eye"}
+                variant="btn-outline-primary"
+                size="btn-sm"
+              />
+            </a>
             <Button
               icon={"bi bi-pencil"}
               variant="btn-outline-secondary"
